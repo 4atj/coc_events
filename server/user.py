@@ -28,7 +28,7 @@ async def signup_route(request: Request):
     signup_request = SignupRequest(username)
     SignupRequest.add(session_id, signup_request)
 
-    response = json({"code": signup_request.auth_code})
+    response = json({"auth_code": signup_request.auth_code})
     response.cookies["session_id"] = session_id
 
     return response
@@ -102,7 +102,7 @@ class User:
     def __init__(self, user_id: str, username: str, public_handle: str, avatar_id: str, session_ids: list[str]) -> None:
         self.user_id = user_id
         self.username = username
-        self.profile_url = profile_url
+        self.public_handle = public_handle
         self.avatar_id = avatar_id
         self.session_ids = session_ids
     
@@ -110,7 +110,7 @@ class User:
         user_collection.insert_one({
             "_id": ObjectId(self.user_id),
             "username": self.username,
-            "public_handle": self.profile_url,
+            "public_handle": self.public_handle,
             "avatar_id": self.avatar_id,
             "session_ids": self.session_ids
         })

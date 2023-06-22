@@ -7,7 +7,9 @@ import aiohttp
 
 from typing import Any
 
-class ClashError(Exception):
+from .exceptions import CocEventsException
+
+class ClashError(CocEventsException):
     pass
 
 json_headers = {
@@ -27,7 +29,7 @@ class ClashManager:
         self.session = aiohttp.ClientSession()
         self.session.cookie_jar.update_cookies({
             'rememberMe': self.token
-        }) # TODO: only send this when request codingame resources
+        })
 
     async def post(self, end_point: str, data, headers: dict[str, str] = {}) -> aiohttp.ClientResponse:
         response = await self.session.post("https://www.codingame.com/" + end_point, data = data, headers = headers)
