@@ -1,0 +1,100 @@
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.username {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loggedin-container {
+  display: none;
+}
+
+.login-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  padding: 20px;
+  width: 360px;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.login-popup h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10;
+}
+
+.login-popup input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.login-popup button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.login-popup .login-verify-button {
+  display: none;
+}
+
+.login-popup .login-auth_field {
+  display: none;
+}
+
+.login-popup .login-error {
+  color: #f00;
+}

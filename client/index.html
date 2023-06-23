@@ -1,8 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Big COC</title>
+  <title>Clash of Code Events</title>
+  <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
+
+  <div class="container">
+    <div class="loggedout-container">
+      <button class="login-button">Login</button>
+    </div>
+    <div class="loggedin-container">
+      <img src="" class="user-avatar" alt="User Avatar">
+      <h3 class="username"></h3>
+      <button class="logout-button">Logout</button>
+    </div>
+  </div>
+  
+  <div class="login-popup">
+    <h2 class="title">Login</h2>
+    <input type="text" class="login-username" placeholder="CodinGame Username">
+    <div class="login-auth_field">
+      <p>Put this code in your CodinGame profile's bio</p>
+      <p class="login-auth_code" style="font-size: large;"></p>
+    </div>
+    <p class="login-error"></p>
+    <button class="login-cancel-button">Cancel</button>
+    <button class="login-verify-button">Verify</button>
+    <button class="login-next-button">Next</button>
+  </div>
+
+  <script src="js/login.js"></script>
+
 </body>
-</html>
+</html>  
